@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatibble" content="IE EDGE">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>display</title>
+    <style>
+        /* div {
+            color: blue;
+            display: inline-block;
+            width: 200px;
+            height: 200px;
+        } */
+
+        /* block dan inline*/
+
+    section {
+        border: 1px solid black;
+        width: 600px;
+        height: 600px;
+        /* display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-evenly;
+        align-items: flex-start; */
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 1fr 3fr 2fr;
+        grid-template-areas: 
+        "satu dua"
+        "tiga tiga"
+        "empat lima";
+
+        /*2 kolom 3 baris*/
+    }
+
+    #satu {
+        grid-area: satu;
+    }
+
+    #dua {
+        grid-area: dua;
+    }
+
+    #tiga {
+        grid-area: tiga;
+    }
+
+    #empat{
+        grid-area: empat;
+    }
+
+    #lima {
+        grid-area: lima;
+    }
+
+    div {
+        /* width: 100px;
+        height: 100px; */
+        background-color: yellow;
+        border: 1px solid black;
+    }
+    </style>
+</head>
+<body>
+    <section>
+        <div id="satu">1</div>
+        <div id="dua">2</div>
+        <div id="tiga">3</div>
+        <div id="empat">4</div>
+        <div id="lima">5</div>
+    </section>
+    <!-- <section>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        Perspiciatis <div>Display</div> necessitatibus, harum illo earum porro, consequatur mollitia veritatis accusamus ipsa sunt eius fugit. 
+        Iusto minus quo esse aspernatur consequatur placeat iure?
+    </section> -->
+</body>
+</html>
